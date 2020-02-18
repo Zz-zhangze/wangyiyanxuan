@@ -1,6 +1,6 @@
 <template>
   <div>
-      Miste
+      <img src="../../../public/img/indexLogo-a90bdaae6b.webp" alt="">
   </div>
 </template>
 

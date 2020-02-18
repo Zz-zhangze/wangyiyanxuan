@@ -45,9 +45,14 @@
         height 98px
         line-height 40px
         text-align center
-        font-size 30px
+        display flex
+        flex-direction column
+        font-size 24px
         &.color
             color red
         .iconfont
+            padding-top 10px
             font-size 40px
+        p
+            text-align center
 </style>
