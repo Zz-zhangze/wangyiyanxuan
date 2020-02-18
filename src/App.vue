@@ -1,14 +1,16 @@
 <template>
-  <div id="app">
-    APP
+  <div id="appContainer">
+    <router-view></router-view>
+    <FootGuide/>
   </div>
 </template>
 
 <script>
-
+import FootGuide from './components/FootGuide/FootGuide'
 export default {
+  components : {FootGuide}
 }
 </script>
 
-<style>
+<style lang="stylus" rel="stylesheet/stylus">
 </style>
