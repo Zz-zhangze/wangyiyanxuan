@@ -40,6 +40,8 @@
     left 0
     bottom 0
     width 100%
+    z-index 99
+    background #fff
     .footItem
         width 20%
         height 98px
