@@ -1,4 +1,4 @@
 export default {
-    ceshi:'ceshishuju',
-    IndexList:{}
+    IndexList:{},
+    CategoryLists:{}
 }
