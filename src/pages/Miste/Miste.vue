@@ -199,11 +199,11 @@
             return index > 1
         })
       },
-      newItemLists(){
-        return this.IndexList.newItemList.filter((item,index)=>{
-          return index < 6
-        })
-      }
+      // newItemLists(){
+      //   return this.IndexList.newItemList.filter((item,index)=>{
+      //     return index > 1
+      //   })
+      // }
     },
   }
 </script>
@@ -280,7 +280,6 @@
           .linear
             width 30%
             height 60px
-            background linear-gradient(rgba(255,255,255,0),rgba(255,255,255,1))
             float left
           i 
             width 70%

@@ -3,6 +3,7 @@ import Classify from '../pages/Classify/Classify.vue'
 import DeserveBuy from '../pages/DeserveBuy/DeserveBuy.vue'
 import MiShoppingCartste from '../pages/ShoppingCart/ShoppingCart.vue'
 import Profile from '../pages/Profile/Profile.vue'
+import ShopLists from '../components/ShopLists/ShopLists.vue'
 
 export default [
     {
@@ -11,7 +12,13 @@ export default [
     },
     {
         path:'/classify',
-        component:Classify
+        component:Classify,
+        children:[
+            {
+                path:'shops',
+                components:ShopLists
+            }
+        ]
     },
     {
         path:'/deservebuy',

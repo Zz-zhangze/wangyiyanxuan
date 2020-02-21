@@ -13,4 +13,6 @@ export default {
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
+  #appContainer
+    height 1334px
 </style>
