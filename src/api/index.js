@@ -8,3 +8,7 @@ export const getIndexList = () => ajax ({
 export const getCategoryList = () => ajax ({
     url:'/cateNavDatas'
 })
+
+export const getCateLists = () => ajax ({
+    url:'/cateLists'
+})

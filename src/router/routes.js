@@ -15,8 +15,8 @@ export default [
         component:Classify,
         children:[
             {
-                path:'shops',
-                components:ShopLists
+                path:'/classify/shops/:mid',
+                component:ShopLists
             }
         ]
     },

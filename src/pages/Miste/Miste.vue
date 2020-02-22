@@ -32,6 +32,7 @@
           <img :src=item.picUrl alt="">
         </div>
       </div>
+      <div class="swiper-pagination"></div>
     </div>
     <div class="safe-guard">
       <ul class="safe-guard-list">
@@ -182,7 +183,12 @@
       new BScroll('.header-scroll',{
         scrollX:true
       }),
-      new Swiper('.swiper-container'),
+      new Swiper('.swiper-container', {
+        autoplay: true,//可选选项，自动滑动
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      }),
       this.$store.dispatch('getIndexLists')
     },
     computed: {
@@ -199,11 +205,11 @@
             return index > 1
         })
       },
-      // newItemLists(){
-      //   return this.IndexList.newItemList.filter((item,index)=>{
-      //     return index > 1
-      //   })
-      // }
+      newItemLists(){
+        return this.IndexList.newItemList.filter((item,index)=>{
+          return index > 1
+        })
+      }
     },
   }
 </script>

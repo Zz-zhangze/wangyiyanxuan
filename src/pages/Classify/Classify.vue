@@ -6,8 +6,10 @@
       <div class="categoryContainer">
         <div class="categoryContainer-left">
           <ul class="left-container">
-            <li class="active" v-for="(item, index) in CategoryLists.categoryL1List" :key="index">
+            <li v-for="(item, index) in CategoryLists.categoryL1List" :key="index">
+              <router-link to="/classify/shops">
               <span>{{item.name}}</span>
+              </router-link>
             </li>
           </ul>
         </div>
@@ -29,6 +31,7 @@
         CategoryLists : state => state.CategoryLists
       })
     },
+    
   }
 </script>
 
