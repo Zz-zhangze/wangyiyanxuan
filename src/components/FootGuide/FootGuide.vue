@@ -42,6 +42,7 @@
     width 100%
     z-index 99
     background #fff
+    border-top 1px solid #eee
     .footItem
         width 20%
         height 98px

@@ -1,5 +1,5 @@
 export default {
     IndexList:{},
     CategoryLists:{},
-    CateLists:{}
+    CateLists:[]
 }

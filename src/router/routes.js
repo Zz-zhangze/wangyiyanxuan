@@ -15,10 +15,15 @@ export default [
         component:Classify,
         children:[
             {
-                path:'/classify/shops/:mid',
-                component:ShopLists
+                path:'shops/:mid',
+                component:ShopLists,
+            },
+            {
+                path:'shops',
+                redirect:'shops/11'
             }
-        ]
+        ],
+        redirect:'/classify/shops'
     },
     {
         path:'/deservebuy',

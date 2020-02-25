@@ -42,7 +42,7 @@
         </li>
       </ul>
     </div>
-    <div  v-if="IndexList" class="random-show">
+    <div class="random-show">
       <div v-if="IndexList.kingKongModule" class="shopList-container">
         <ul class="shopList-lists">
           <li class="shopList-item" v-for="(kongList, index) in IndexList.kingKongModule.kingKongList" :key="index">
@@ -139,7 +139,7 @@
             <span>更多</span>
             <i class="iconfont icon-dibudaohanglan-"></i>
           </div>
-        </div>newItemLists
+        </div>
         <div v-if="IndexList" class="timedown-buy-lists">
           <li class="timedown-buy-item" v-for="(item, index) in newItemLists" :key="index">
             <img :src=item.listPicUrl alt="">
@@ -161,7 +161,20 @@
       </div>
       <div class="getiao"></div>
       <div class="dowload">
+        <div class="footerTop">
+          <div class="downLoadApp">下载APP</div>
+          <div class="PCEdition">电脑版</div>
+        </div>
+        <div class="footerBottom">
+          <div class="copyright">
+            <span>网易公司版权所有 © 1997-</span>
+            <span>2020</span>
+          </div>
+          <div class="licenses">
+              食品经营许可证：JY13301080111719
+          </div>
 
+        </div>
       </div>
     </div>
   </div>
@@ -179,7 +192,7 @@
         priceIndex:0
       }
     },
-    async mounted(){
+    mounted(){
       new BScroll('.header-scroll',{
         scrollX:true
       }),
@@ -206,9 +219,11 @@
         })
       },
       newItemLists(){
-        return this.IndexList.newItemList.filter((item,index)=>{
-          return index > 1
-        })
+        if (this.IndexList.newItemList) {
+          return this.IndexList.newItemList.filter((item,index)=>{
+            return index > 1
+          })
+        }
       }
     },
   }
@@ -617,7 +632,35 @@
             color black
             line-height 50px
       .dowload
-        width 750px
-        height 344px
+        height 244px
         background #414141
+        box-sizing border-box
+        padding 54px 20px 28px
+        margin-bottom 100px
+        .footerTop
+          height 62px
+          display flex
+          justify-content center
+          margin-bottom 36px
+          div
+            width 172px
+            height 62px
+            box-sizing border-box
+            border 1px solid #999
+            text-align center
+            line-height 62px
+            color #fff
+            &.downLoadApp
+              margin-right 50px
+        .footerBottom
+          height 64px
+          .copyright
+            text-align center
+            line-height 35px
+            span
+              color #999
+          .licenses
+            text-align center
+            line-height 35px
+            color #999
 </style>
